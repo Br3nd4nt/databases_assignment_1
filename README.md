@@ -1,3 +1,4 @@
+![alt text](database_assignment_1.drawio.png)
 ## Пользователи 
 ### User - покупатель
 #### Поля
@@ -8,6 +9,7 @@
 #### Методы
 - CreateOrder (List[Dish]) => Order
 - ViewAllOrders() => List[Order]
+- PayForOrder(Order) => Bool - result
 
 ### Restaurant - ресторан
 #### Поля
@@ -23,15 +25,17 @@
 - passwordHash
 - currentOrder
 #### Методы
-- MarkOrderasdelivered()
+- MarkOrderAsDelivered()
 - GetCurrentOrder() => Order
 
 ## Dish
 - price
-- listofIngredientsAndNutritions
+- listOfIngredientsAndNutritions
+- restaurant - Restaurant
 
 ## Order
 - customer - User
 - allDishes - List[Dish]
 - orderStatus - {Accepted, Cooking, Delivering, Delivered, Canceled}
+- restaurant - Restaurant
 
